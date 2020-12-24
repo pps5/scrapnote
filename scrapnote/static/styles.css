@@ -1,0 +1,74 @@
+#container {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    font-family: "Roboto", "Noto Sans JP";
+}
+
+#command-wrapper {
+    flex: 0 1 auto;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#command {
+    width: calc(100% - 16px);
+    margin: 0 auto 8px auto;
+    padding: 6px;
+    font-size: 12pt;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+}
+
+#list {
+    background-color: white;
+    flex: 0 1 auto;
+    width: calc(100% - 16px);
+    height: 120px;
+    padding: 6px;
+    margin: 0 auto 0 auto 8px;
+    border-bottom: 1px solid lightgray;
+    overflow-y: auto;
+}
+
+#list::-webkit-scrollbar {
+    width: 2px;
+}
+
+#list::-webkit-scrollbar-track {
+	background: white;
+}
+
+#list::-webkit-scrollbar-thumb {
+	background: lightgray;
+}
+
+#list div div {
+    height: 12px;
+    font-size: 11pt;
+    padding: 4px 8px;
+}
+
+#list div.selected > div {
+    background: lightgray;
+}
+
+#editor {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    width: calc(100% - 16px);
+    height: 100%;
+    margin: 8px auto;
+    padding: 0 8px;
+    overflow: hidden;
+}
+
+
+.monaco-editor .decorationsOverviewRuler,
+.monaco-editor .scrollbar.vertical,
+.monaco-editor .scrollbar .slider {
+    width: 2px !important;
+}
